@@ -4,7 +4,7 @@ The final project for my neuroscience bioinformatics course required the creatio
 
 # Datasets
 
-The original dataset can be ![downloaded here] (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305314), where the single-cell samples are the files labeled `snRNA-seq Sample # Condition Age` and the spatial samples are the files labeled `Visium Condition Age Sample`. The paper I used as a reference for my methods and clustering can be [found here] (https://www.nature.com/articles/s42003-025-08959-z). 
+The original dataset can be [downloaded here] (https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE305314), where the single-cell samples are the files labeled `snRNA-seq Sample # Condition Age` and the spatial samples are the files labeled `Visium Condition Age Sample`. The paper I used as a reference for my methods and clustering can be [found here] (https://www.nature.com/articles/s42003-025-08959-z). 
 
 # Methods
 
@@ -12,7 +12,7 @@ The original dataset can be ![downloaded here] (https://www.ncbi.nlm.nih.gov/geo
 
 ### Data & Preprocessing
 
-Single-cell samples were loaded in based on their condition and age group. Samples were individually preprocessed and had doublets removed using the package scDblFinder. Afterwards, all samples were merged into a Seurat object with their condition and age kept in the metadata before defining a subset based on nFeature_RNA and percent.mt. Then, the object was preprocessed and clustered using dimensions 1:19 and clustering resolution 0.3, resulting in 25 clusters. ![Single-cell clusters pre-Harmony integration] (./sc_img/sc_pre_harmony_clusters.png)
+Single-cell samples were loaded in based on their condition and age group. Samples were individually preprocessed and had doublets removed using the package scDblFinder. Afterwards, all samples were merged into a Seurat object with their condition and age kept in the metadata before defining a subset based on nFeature_RNA and percent.mt. Then, the object was preprocessed and clustered using dimensions 1:19 and clustering resolution 0.3, resulting in 25 clusters. ![Single-cell clusters pre-Harmony integration] (sc_img/sc_pre_harmony_clusters.png)
 
 ### Harmony Integration
 

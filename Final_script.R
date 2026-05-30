@@ -257,8 +257,6 @@ plt1+plt2
 #plot(plt1+plt2)
 #dev.off()
 
-DotPlot(merged_obj_har, features = c("Grik3", "Cdh9", "Rorb", "Mog", "Pdgfra", "Cntnap5a", "C1qa", "Kcnc2", "Rbms3", "Ndst4", "Itgbl1", "Cped1", "Slc4a5", "Gad2", "Vwc2l", "Ebf1", "Ccdc170", "Atp13a5", "Cfh", "Lamp5"))
-
 #----------------------- CELL-TYPE ANNOTATION ---------------------------------
 #--------EXPORT CSV------------------
 # Find gene markers in each cluster
