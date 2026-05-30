@@ -15,15 +15,7 @@ The original dataset can be [downloaded here] (https://www.ncbi.nlm.nih.gov/geo/
 Single-cell samples were loaded in based on their condition and age group. Samples were individually preprocessed and had doublets removed using the package scDblFinder. Afterwards, all samples were merged into a Seurat object with their condition and age kept in the metadata before defining a subset based on nFeature_RNA and percent.mt. Then, the object was preprocessed and clustered using dimensions 1:19 and clustering resolution 0.3, resulting in 25 clusters. 
 
 <p>
-    <img src="./sc_img/sc_pre_harmony_clusters.png" />
-</p>
-
-<p>
-    <img scr="/sc_img/sc_annotated_clusters.png" />
-</p>
-
-<p>
-    <img src="sc_img/sc_annotated_clusters.png" />
+    <img src="./sc_img/sc_pre_harmony_clusters.png" width="300" />
 </p>
 
 ### Harmony Integration
@@ -32,11 +24,23 @@ The Seurat object using Harmony for batch correction using the dimensions 1:19 a
 
 ### Cell-Type Annotation
 
-Top gene markers for each cluster were extracted using FindAllMarkers and clusters were annotated based on their cell type using [Enrichr] (https://maayanlab.cloud/Enrichr/#find). After finding the cell types of each cluster, clusters were annotated with their cell type. ![Annotated single-cell clusters] (./sc_img/sc_annotated_clusters.png)
+Top gene markers for each cluster were extracted using FindAllMarkers and clusters were annotated based on their cell type using [Enrichr] (https://maayanlab.cloud/Enrichr/#find). After finding the cell types of each cluster, clusters were annotated with their cell type.
+
+<p>
+    <img src="/sc_img/sc_annotated_clusters.png" />
+</p>
 
 ### Proportion Test
 
-The proportion of cell types were compared between condition and age using the package scProportionTest with permutation-based testing. ![ProportionTest split on condition] (./sc_img/sc_condition_proportion.png) ![ProportionTest split on age] (./sc_img/sc_age_proportion.png)
+The proportion of cell types were compared between condition and age using the package scProportionTest with permutation-based testing. 
+
+<p>
+    <img src="/sc_img/sc_condition_proportion.png" />
+</p>
+
+<p>
+    <img src="/sc_img/sc_age_proportion.png" />
+</p>
 
 ### Differential Expression
 
@@ -50,7 +54,11 @@ Datasets were loaded in and converted to HDF5 file type using Load10X_Spatial. A
 
 ### Cluster Annotation
 
-Spatially variable features were identified using Moran's I. Top gene markers for each cluster were paired with a region/cell of interest using Enrichr, while clusters not deemed to be of interest were grouped under the label "Other". 11 clusters of interest were identified. ![Annotated spatial clusters] (./spatial_img/spatial_clusters_annotated.png)
+Spatially variable features were identified using Moran's I. Top gene markers for each cluster were paired with a region/cell of interest using Enrichr, while clusters not deemed to be of interest were grouped under the label "Other". 11 clusters of interest were identified. 
+
+<p>
+    <img src="/spatial_img/spatial_clusters_annotated.png" />
+</p>
 
 ### Differential Expression
 
@@ -58,7 +66,11 @@ Top markers for each cluster split on condition then age were identified and vis
 
 ### Cell-Cell Communication
 
-CellChat using the mouse database was using to analyze cell-cell communication. Interactions and pathways were identified and visualized for each sample. Afterwards, all cellchat objects were merged and inferred interactions between samples were identified and visualized. ![Spatial interactions from CellChat] (./spatial_img/spatial_interactions.png)
+CellChat using the mouse database was using to analyze cell-cell communication. Interactions and pathways were identified and visualized for each sample. Afterwards, all cellchat objects were merged and inferred interactions between samples were identified and visualized. 
+
+<p>
+    <img src="/spatial_img/spatial_interactions.png" />
+</p>
 
 # Limitations & Challenges
 
